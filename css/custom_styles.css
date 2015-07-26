@@ -10,6 +10,9 @@
   }
   .logo img,.tiltle h1{
 	display:inline;
+	vertical-align:middle;
+	margin-top: 10px;
+    margin-bottom: 10px;
   }
   .logo {
 	vertical-align:middle;
@@ -17,12 +20,10 @@
   .logo img{
 	height:70px;
 	width:70px;
-	margin-top: 20px;
-    margin-bottom: 10px;
   }
   .title {
     font-size: 14px;
-	vertical-align:middle;
+	color:#3276b1;
   }
   .header_logo{
 	 //background: #151515;
@@ -38,25 +39,92 @@
  .navbar {
   border-radius: 0px;
   margin-bottom: 0px;
+  border:0px;
 }  
+ .navbar-inverse {
+  background-color:#3276b1;
+  color:#fff;
+}
+.navbar-inverse .navbar-nav>li>a{
+  color:#fff;
+}
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus {
+  color: #fff;
+  background-color: #245594;
+}
+.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:hover, .navbar-inverse .navbar-nav>.open>a:focus {
+  color: #fff;
+  background-color: #245594;
+}
+.navbar-inverse .navbar-nav li:hover, .navbar-inverse .navbar-nav li:focus{
+ background-color: #245594;
+}
+ .navbar-inverse .navbar-nav li:hover>.dropdown-menu, .navbar-inverse .navbar-nav li:focus>.dropdown-menu{
+	display:block;
+}
+ .navbar-inverse .navbar-nav li:hover>.sub-dropdown-menu, .navbar-inverse .navbar-nav li:focus>.sub-dropdown-menu{
+	display:block;
+}
+.sub-dropdown-menu {
+    font-size: 14px;
+    list-style: outside none none;
+	position: absolute;
+    top: 0;
+    left: 100%;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 160px;
+    padding: 5px 0px;
+    margin: 2px 0px 0px;
+    font-size: 14px;
+    list-style: outside none none;
+    background-color: #FFF;
+   /*border: 1px solid rgba(0, 0, 0, 0.15);*/
+    border-radius: 4px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.176);
+    background-clip: padding-box;
+}
+.navbar-collapse.in {
+   overflow:visible ;
+}
+
 #main-slider .prev, #main-slider .next {
   position: absolute;
-  top: 50%;
-  background-color: #c52d2f;
+  top: 44%;
+  background-color: rgba(50, 118, 177, 0.61);
   color: #fff;
-  margin-top:20%;
   display: inline-block;
   height: 40px;
   line-height: 40px;
   width: 40px;
   text-align: center;
-  border-radius: 4px;
+  border-radius: 20px;
   z-index: 5;
+}
+.carousel-control {
+  position: absolute;
+  top: 44%;
+  background-color: rgba(50, 118, 177, 0.61);
+  color: #fff;
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+  width: 40px;
+  text-align: center;
+  border-radius: 20px;
+  z-index: 5;
+}
+.myaccount{
+right:0px;
+display:inline-block;
+clear:both;
+float:right;
 }
 
 #main-slider .prev:hover,
 #main-slider .next:hover {
-  background-color: #000;
+  background-color: rgb(50, 118, 177);
 }
 
 #main-slider .prev {
@@ -102,35 +170,22 @@
   background: #000 url(../images/services/bg_services.png);
   background-size: cover;
 }
-#partner{
-  background: #000 url(../images/services/bg_services.png);
-  background-size: cover;
-}
-
 .services-wrap {
   padding: 40px 30px;
   background: #fff;
   border-radius: 4px;
   margin: 0 0 40px;
 }
-.carousel-control {
-	width:8%;
+
+.navbar-brand{
+  display:none;
 }
- .navbar-nav > li {
-    margin-left: 0px !important;
-}
-.navbar .container{
-	margin-top:4px;
-}
-.navbar-brand,h2,.h2{
+ .navbar-brand,h2,.h2{
 	text-align:center;
 	text-transform:catpitalize;
 }
-  @media only screen and (min-width: 1025px) {
-	  #main-slider .prev, #main-slider .next {
-		margin-top:0%;
-	  }
-	  .title h1{
+  @media only screen and (min-width: 1074px) {
+      .title h1{
 		font-size:3em;
 	  }
 	  .logo img{
@@ -147,10 +202,8 @@
 		font-size:1.75em;
 	  }
   }
-  @media only screen and (max-width: 1024px) {
-	  #main-slider .prev, #main-slider .next {
-		margin-top:-28%;
-	  }
+  
+  @media only screen and (max-width: 920px) {
 	  #main-slider .container {
 	   padding-right: 5px;
 	   padding-left: 5px;
@@ -171,20 +224,21 @@
 	  h3,.h3{
 		font-size:1.5em;
 	  }
-	  .nav > li > a ,.dropdown-menu >li>a{
-		padding: 10px 10px;
+	  /* .nav > li > a ,.dropdown-menu >li>a{
+		padding-right: 10px;
+		padding-left: 10px;
 		font-size:13px;
-	  }
-	  .navbar-brand{
-		display:none;
-	  }
+	  } */
 	  .navbar-collapse{
 		padding:0px;
 	  }
+      .navbar-brand{
+		display:none;
+	  }
   }
-  @media only screen and (max-width: 680px) {
-  	  .navbar-brand{
-		display:block;
+  @media only screen and (max-width: 767px){
+	  .navbar-brand{
+		display:none;
 	  }
 	  .title h1{
 		font-size:2em;
@@ -206,7 +260,6 @@
 	  }
 	  .navbar-brand,h2,.h2{
 		font-size:1.5em;
-		
 	  }
 	  h3,.h3{
 		font-size:1.25em;
